@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- res/drawable/ic_history.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="24" android:viewportHeight="24">
+
+    <!-- Circle outline -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M13,3a9,9 0 1,0 0,18 9,9 0 0,0 0,-18zM13,1c6.08,0 11,4.92 11,11s-4.92,11 -11,11 -11,-4.92 -11,-11 4.92,-11 11,-11z"/>
+    <!-- Clock hands -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M12.5,7h-1v6.25l5.5,3.25l0.5,-0.86l-5,-2.95z"/>
+</vector>

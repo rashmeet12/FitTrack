@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/ic_workout.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="24" android:viewportHeight="24">
+
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M20.57,14.86L19,13.29V6h-2v5.29L14.71,8l-1.41,1.41L16,12.12V19h2v-5.29l1.57,1.57L20.57,14.86zM3.43,9.14L5,10.71V18h2v-5.29l2.71,2.71,1.41-1.41L7,11.88V7H5v3.88L3.43,9.14z"/>
+</vector>
