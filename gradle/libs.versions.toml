@@ -10,6 +10,7 @@
 #composeBom = "2024.04.01"
 
 androidGradlePlugin = "8.7.3"
+gsonVersion = "2.10.1"
 kotlinPlugin = "2.0.21"
 kspPlugin = "2.0.21-1.0.27"
 hiltPlugin = "2.51.1"
@@ -21,6 +22,7 @@ kotlinCore = "1.16.0"
 lifecycle = "2.9.0"
 activityCompose = "1.10.1"
 composeBom = "2025.05.01"
+mapsCompose = "6.4.1"
 navigation = "2.9.0"
 
 # Dependency Injection
@@ -49,6 +51,9 @@ truth = "1.1.5"
 mockk = "1.13.8"
 androidxJunit = "1.2.1"
 espresso = "3.6.1"
+playServicesLocation = "21.3.0"
+playServicesMaps = "19.2.0"
+firebaseCrashlyticsBuildtools = "3.0.3"
 
 
 
@@ -70,6 +75,7 @@ espresso = "3.6.1"
 
 
 # Core
+google-gson = { module = "com.google.code.gson:gson", version.ref = "gsonVersion" }
 kotlin-core = { group = "androidx.core", name = "core-ktx", version.ref = "kotlinCore" }
 lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
 activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
@@ -85,6 +91,7 @@ compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 
 # Navigation
+maps-compose = { module = "com.google.maps.android:maps-compose", version.ref = "mapsCompose" }
 navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
 
 # Hilt
@@ -121,6 +128,9 @@ truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
 mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxJunit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "firebase-crashlytics-buildtools", version.ref = "firebaseCrashlyticsBuildtools" }
 
 
 [plugins]
