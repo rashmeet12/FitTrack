@@ -4,12 +4,16 @@ plugins {
 //    alias(libs.plugins.android.application)
 //    alias(libs.plugins.kotlin.android)
 //    alias(libs.plugins.kotlin.compose)
+
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
     alias(libs.plugins.kotlin.serialization)
     id("org.jetbrains.kotlin.plugin.compose") version "2.0.21"
+    alias(libs.plugins.google.services)
+    id("com.google.firebase.crashlytics")
+
 }
 
 android {
@@ -45,7 +49,6 @@ android {
         }
     }
 
-
         buildTypes {
             release {
                 isMinifyEnabled = false
@@ -76,6 +79,10 @@ android {
         }
     }
 
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
+}
+
     dependencies {
 
 //    implementation(libs.androidx.core.ktx)
@@ -105,7 +112,7 @@ android {
         implementation(libs.compose.ui.graphics)
         implementation(libs.compose.ui.tooling.preview)
         implementation(libs.compose.material3)
-
+        implementation(libs.androidx.material.icons.extended)
 
         // Navigation
         implementation(libs.navigation.compose)
@@ -115,6 +122,12 @@ android {
         implementation(libs.play.services.location)
         implementation(libs.play.services.maps)
         implementation(libs.firebase.crashlytics.buildtools)
+        implementation(libs.places)
+        implementation(libs.ads.mobile.sdk)
+        implementation(libs.espresso.core)
+        implementation(libs.googleid)
+        implementation(libs.firebase.storage.ktx)
+
         ksp(libs.hilt.compiler)
         implementation(libs.hilt.navigation.compose)
 
@@ -123,9 +136,42 @@ android {
 
         implementation(libs.google.gson)
 
-        implementation("com.google.android.gms:play-services-location:21.3.0")
+        implementation(libs.play.services.location)
         // Maps Compose library
         implementation(libs.maps.compose)
+
+        implementation ("com.google.android.gms:play-services-auth:21.3.0")
+
+
+
+        implementation(libs.material)
+
+        implementation(libs.firebase.crashlytics)
+
+        // Import the Firebase BoM
+        implementation(platform(libs.firebase.bom))
+
+        implementation ("androidx.credentials:credentials:1.5.0")
+        implementation ("androidx.credentials:credentials-play-services-auth:1.5.0")
+
+
+
+        implementation(libs.firebase.crashlytics.ktx)
+        implementation(libs.firebase.analytics.ktx)
+
+
+
+        // Firebase Authentication
+        implementation (libs.firebase.auth.ktx)
+
+        // Kotlin coroutines support for Task.await()
+        implementation (libs.kotlinx.coroutines.play.services)
+
+        implementation(libs.firebase.analytics)
+
+
+        // Add the dependencies for any other desired Firebase products
+        // https://firebase.google.com/docs/android/setup#available-libraries
 
         // Room
         implementation(libs.room.runtime)
@@ -149,6 +195,16 @@ android {
 
         // Charts
         implementation(libs.mp.android.chart)
+
+
+        // Date picker (if not already included)
+        // implementation "androidx.compose.material3:material3:1.2.0"
+
+        // For image picking
+        implementation (libs.androidx.activity.compose.v182)
+
+        // For file access (if needed for profile pictures)
+        implementation (libs.androidx.documentfile)
 
         // Testing
         testImplementation(libs.junit)

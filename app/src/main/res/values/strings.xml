@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">FitTrack</string>
+    <string name="lesson">Lesson</string>
+    <string name="vocabulary">Vocabulary</string>
+    <string name="home">Home</string>
+    <string name="ranking">Ranking</string>
+    <string name="office_hours">Office Hours</string>
+    <string name="elementary">Elementary</string>
+    <string name="unit_homework">Unit 1.2\nHomework</string>
+    <string name="total_words">Total Words</string>
+    <string name="my_vocabulary">My Vocabulary</string>
+    <string name="repeat">Repeat</string>
+    <string name="coins">Coins</string>
+    <string name="scores">Scores</string>
+    <string name="my_progress">My Progress</string>
+    <string name="default_web_client_id">361429556536-k43hq7n6simfs64r98f6ser6j6lbqte8.apps.googleusercontent.com</string>
+
 </resources>

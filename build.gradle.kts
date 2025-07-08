@@ -10,9 +10,11 @@ plugins {
     alias(libs.plugins.ksp) apply false
     alias(libs.plugins.hilt) apply false
     alias(libs.plugins.kotlin.serialization) apply false
+    alias(libs.plugins.google.services) apply false
+    id("com.google.firebase.crashlytics") version "3.0.3" apply false
 
 }
 
-//tasks.register("clean", Delete::class) {
-//    delete(rootProject.buildDir)
-//}
+tasks.register("clean", Delete::class) {
+    delete(rootProject.layout.buildDirectory)
+}
